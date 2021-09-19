@@ -1,0 +1,190 @@
+/* 共通 */
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.wapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;    /* 画像の下の余白を消す */
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sub-title {
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* header */
+
+#header {
+  margin-top: 50px;
+}
+
+.site-title {
+  width: 180px;
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+#header .site-title a {
+  display: block;
+}
+
+
+/* mainvisual */
+
+.main-visual {
+  margin-bottom: 60px;
+}
+
+
+/* INDEX */
+
+#index {
+  background-color: tan;
+  padding : 60px;
+  margin-bottom: 60px;
+}
+
+.index-box {
+  padding: 30px;
+  border: solid 1px #333;
+}
+
+#index ol {
+  display: table;
+  margin: 0 auto;
+}
+
+#index li {
+  margin-bottom:20px;
+}
+
+#index li:last-child {
+  margin-bottom:0;
+}
+
+
+/* grid photo */
+
+#photo {
+  background-color: orange;
+  margin-bottom: 60px;
+}
+
+
+.wrapper-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns:1fr 1fr;  /* 画像を２つ横並びにする */
+
+}
+
+
+/* DETAIL */
+
+#detail {
+  background-color: plum;
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.detail-box {
+  display: flex;
+}
+
+.dl-box {
+  width: 35%;
+  padding-right: 30px;
+}
+
+.text-box {
+  border-left: solid 1px #333;
+  padding-left: 40px;
+}
+
+#detail dt {
+  font-weight: bold;
+}
+
+#detail dd {
+  margin-bottom: 10px;
+}
+
+#detail dd:last-child {
+  margin-bottom: 0;
+}
+
+.text-box a {
+  color: #333;
+}
+
+.text-box a:hover {
+  opacity: 0.8;
+}
+
+/* footer */
+
+footer {
+  margin-bottom: 15px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width:1024px) {
+  .site-title {
+    margin-left: 10px;
+  }
+  .inner {
+    padding: 0 20px;
+  }
+  #index {
+    padding: 30px;
+  }
+  .wrapper-grid {  /* グリッドレイアウト解除 */
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  #detail {
+    padding: 30px;
+  }
+  .detail-box {
+    display: block;
+  }
+  .dl-box {
+    width: 100%;
+    padding: 0;
+  }
+  .text-box {
+    margin-top: 30px;
+    padding: 0;
+    padding-top: 30px;
+    border-left: none;
+    border-top: solid 1px #333;
+  }
+
+
+}
